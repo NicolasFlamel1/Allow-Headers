@@ -334,7 +334,7 @@ ngx_int_t headerFilter(ngx_http_request_t *request) {
 		if(locationConfiguration->allowedHeaders) {
 		
 			// Go through all allowed headers
-			ngx_str_t *allowedHeaders = locationConfiguration->allowedHeaders->elts;
+			const ngx_str_t *allowedHeaders = locationConfiguration->allowedHeaders->elts;
 			for(ngx_uint_t j = 0; j < locationConfiguration->allowedHeaders->nelts; ++j) {
 			
 				// Get allowed headers
